@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine
+MAINTAINER shah syed
+COPY build/libs/EngineerSkillAPIAWS.jar EngineerSkillAPIAWS.jar
+ENTRYPOINT ["java","-jar","/EngineerSkillAPIAWS.jar"]
