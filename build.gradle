@@ -35,6 +35,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+bootJar {
+    baseName = 'EngineerSkillAPIAWS'
+    mainClassName = 'com.shah.fse.EngineerSkillApiawsApplication'
+    // Exclude manifest signature files
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/LICENSE'
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
