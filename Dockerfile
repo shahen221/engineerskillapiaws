@@ -8,5 +8,5 @@ WORKDIR /EngineerSkillAPIAWS
 copy . /EngineerSkillAPIAWS
 RUN gradle bootJar
 WORKDIR target
-RUN mv *.jar EngineerSkillAPIAWS.jar
+RUN mv EngineerSkillAPIAWS.jar EngineerSkillAPIAWS.jar
 ENTRYPOINT ["java","-jar","/EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar"]
