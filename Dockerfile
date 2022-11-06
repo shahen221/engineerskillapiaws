@@ -6,5 +6,5 @@ WORKDIR /EngineerSkillAPIAWS
 copy . /EngineerSkillAPIAWS
 RUN gradle bootJar
 WORKDIR target
-copy build/libs/*.jar /EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar
+copy /build/libs/EngineerSkillAPIAWS.jar /EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar
 ENTRYPOINT ["java","-jar","/EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar"]
