@@ -3,10 +3,10 @@ MAINTAINER shah syed
 VOLUME /tmp
 FROM gradle:6.9.2-jdk8
 WORKDIR /EngineerSkillAPIAWS
-copy . /EngineerSkillAPIAWS
+copy . /EngineerSkillAPIAWS/
 RUN gradle bootJar
 WORKDIR target
 RUN echo "Before copying jar file"
-RUN ls -l build/libs
+RUN ls -l /EngineerSkillAPIAWS/
 copy build/libs/*.jar /EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar
 ENTRYPOINT ["java","-jar","/EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar"]
