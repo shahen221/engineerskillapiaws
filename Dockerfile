@@ -8,5 +8,5 @@ RUN gradle bootJar
 WORKDIR target
 RUN echo "Before copying jar file"
 RUN ls -l /EngineerSkillAPIAWS/build/libs
-copy build/libs/*.jar /EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar
+RUN cp /EngineerSkillAPIAWS/build/libs/EngineerSkillAPIAWS.jar /EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar
 ENTRYPOINT ["java","-jar","/EngineerSkillAPIAWS/target/EngineerSkillAPIAWS.jar"]
