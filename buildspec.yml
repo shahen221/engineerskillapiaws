@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - "docker buildx build --platform linux/amd64 -t engineerskillapiaws:latest . "
+      - "docker build -t engineerskillapiaws:latest . "
       - docker tag engineerskillapiaws:latest shahen221/engineerskillapiaws:latest
     finally:
       - command

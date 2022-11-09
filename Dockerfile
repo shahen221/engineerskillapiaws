@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM --platform=linux/amd64 openjdk:8-jdk-alpine
 MAINTAINER shah syed
 VOLUME /tmp
 FROM gradle:6.9.2-jdk8
