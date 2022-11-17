@@ -6,7 +6,7 @@ phases:
     on-failure: ABORT
     commands:
       - echo Logging in to Docker Hub...
-      - "docker login -u 'shahen221' -p '$munna123'"
+      - "docker login -u 'username' -p 'password'"
   build:
     # run-as: Linux-user-name
     on-failure: ABORT
@@ -14,7 +14,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - "docker build -t engineerskillapiaws:latest . "
-      - docker tag engineerskillapiaws:latest shahen221/engineerskillapiaws:latest
+      - docker tag engineerskillapiaws:latest dockerusername/engineerskillapiaws:latest
     finally:
       - command
       - command
@@ -24,4 +24,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push shahen221/engineerskillapiaws:latest
+      - docker push dockerusername/engineerskillapiaws:latest
